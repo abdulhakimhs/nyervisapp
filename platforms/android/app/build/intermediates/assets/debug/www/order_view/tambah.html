@@ -1,0 +1,72 @@
+<ons-navigator var="app.tambah">
+	<ons-page ng-controller="CrudController">
+		<ons-toolbar>
+			<div class="left">
+				<ons-toolbar-button ng-click="app.tabbar.setTabbarVisibility(true); app.home.popPage()">
+			        <ons-icon icon="md-arrow-left"></ons-icon>
+			    </ons-toolbar-button>
+			</div>
+			<div class="center">Pilihan Layanan</div>
+		</ons-toolbar>
+
+		<ons-list>
+			<ons-list-header>Pilih Layanan</ons-list-header>
+
+			<ons-list-item ons-lazy-repeat="productDelegate" tappable style="border-bottom: 1px solid #eee;">
+		      <label class="left">
+		        <ons-input name="jasa" type="radio" input-id="{{id_product}}" ng-model="$parent.jasa" ng-value="{{id_product}}"></ons-input>
+		      </label>
+		      <label for="{{id_product}}" class="center">
+		        <ons-col>
+					<div class="name">{{ name_product }}</div>
+					<div class="desc">{{ desc_product }}</div>
+					<ons-row>
+						<ons-col>
+							<div class="price">
+								Rp {{ price_product }}
+							</div>
+						</ons-col>
+					</ons-row>
+				</ons-col>
+				<ons-col width="120px">
+					<img src="http://ws.jarvisid.com/uploads/{{image_product}}" class="thumbnail">
+				</ons-col>
+		      </label>
+		    </ons-list-item>
+
+			
+		    <!-- <ons-list-item tappable>
+				<label class="left">
+					<ons-input name="jasa" type="radio" input-id="radio-10" ng-model="jasa" value="berita"></ons-input>
+				</label>
+				<label for="radio-10" class="center">
+					<ons-col>
+						<div class="name">Coba produk</div>
+						<div class="desc">Deskripsi Produknya</div>
+						<ons-row>
+							<ons-col>
+								<div class="price">
+									Rp 10000
+								</div>
+							</ons-col>
+						</ons-row>
+					</ons-col>
+					<ons-col width="120px">
+						<img src="http://lorempixel.com/100/100/" class="thumbnail">
+					</ons-col>
+				</label>
+			</ons-list-item> -->
+		</ons-list>
+
+		<div class="atc-fixed" style="border-top: 1px solid #eee;">
+			<ons-list>
+				<ons-list-item>
+					<ons-col>
+						<ons-button ng-click="isiSelanjutnya('jasa', jasa, 'create')" modifier="large">Lanjut</ons-button>
+					</ons-col>
+				</ons-list-item>
+			</ons-list>
+		</div>
+
+	</ons-page>
+</ons-navigator>

@@ -1,0 +1,21 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.nyervis.app"
+    },
+    "skwas-cordova-plugin-datetimepicker": {
+      "PACKAGE_NAME": "com.nyervis.app"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.nyervis.app"
+    }
+  },
+  "dependent_plugins": {}
+}

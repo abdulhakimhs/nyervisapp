@@ -1,0 +1,40 @@
+<ons-page ng-controller="AppController" ons-init="timecountInit()">
+<ons-toolbar>
+	<div class="left">
+		<ons-toolbar-button ng-click="app.tabbar.setTabbarVisibility(true); app.pesanan.popPage()">
+	        <ons-icon icon="md-arrow-left"></ons-icon>
+	    </ons-toolbar-button>
+	</div>
+	<div class="center">
+		Detail Pesanan
+	</div>
+</ons-toolbar>
+
+<ons-list id="detail-pesanan-list" style="background: white;">
+	<ons-list-item>
+      <div class="left">
+        <span class="list-item__title">Cuci AC</span>
+      </div>
+      <div class="right">
+      	<span class="list-item__title">10 Jan 2018 | 10:00 WIB</span>
+      </div>
+    </ons-list-item>
+</ons-list>
+
+<div style="background-color: white; text-align: center;">
+	<img src="img/search.png" style="width: 60%">
+	<p style="font-weight: bold;">
+		Mencari Teknisi
+	</p>
+	<p>
+		Anda dapat menutup aplikasi ini, kami akan menghubungi anda paling lambat dalam
+	</p>
+	<h4>
+		<span id="time">30:00</span>
+	</h4>
+	<div style="padding: 20px;">
+	    <ons-button modifier="large" ng-click="">Butuh Bantuan ?</ons-button><br/><br/>
+	    <ons-button modifier="large--quiet" ng-click="" style="color: red;">Berhenti Mencari!</ons-button>
+    </div>
+</div>
+

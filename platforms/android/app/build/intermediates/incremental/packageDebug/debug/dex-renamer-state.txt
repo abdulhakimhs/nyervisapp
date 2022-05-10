@@ -1,0 +1,4 @@
+#Sat Jan 05 21:44:33 WIB 2019
+base.0=/media/abdulhakim/DATA1/HNG/DVD Mobile Hybrid/nyervisapp_v1.2.2/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

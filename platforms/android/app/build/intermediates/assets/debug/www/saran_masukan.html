@@ -1,0 +1,22 @@
+<ons-page>
+	<ons-toolbar>
+		<div class="left">
+			<ons-toolbar-button ng-click="app.tabbar.setTabbarVisibility(true); app.bantuan.popPage()">
+		        <ons-icon icon="md-arrow-left"></ons-icon>
+		    </ons-toolbar-button>
+		</div>
+		<div class="center">
+			Saran Dan Masukkan
+		</div>
+	</ons-toolbar>
+
+	<div style="text-align: center; background: white">
+		<p align="justify" style="padding: 20px;">
+			Kami mohon maaf atas pengalaman kurang menyenangkan yang Anda alami. Silahkan jelaskan detail masalah Anda di sini (min. 20 karakter).
+		</p>
+		<textarea style="margin-top: -10px;" cols="44" rows="5" placeholder="Tulis keluhan Anda disini..."></textarea><br>
+		<div style="padding: 20px;">
+			<ons-button modifier="large">Kirim</ons-button>
+		</div>
+	</div>
+</ons-page>

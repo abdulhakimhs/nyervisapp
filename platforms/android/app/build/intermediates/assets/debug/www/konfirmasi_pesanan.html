@@ -1,0 +1,83 @@
+<ons-toolbar>
+	<div class="left">
+		<ons-toolbar-button ng-click="app.pesanan.popPage()">
+        <ons-icon icon="md-arrow-left"></ons-icon>
+    </ons-toolbar-button>
+	</div>
+	<div class="center">
+		Konfirmasi Pesanan
+	</div>
+</ons-toolbar>
+
+<ons-list>
+	<ons-list-header>Lokasi dan Waktu Pengerjaan</ons-list-header>
+	<ons-list-item tappable modifier="chevron">
+      <div class="left">
+        <ons-icon icon="md-calendar-note" class="list-item__icon"></ons-icon>
+      </div>
+      <div class="center">
+      	<span class="list-item__title">10:15</span>
+        <span class="list-item__subtitle">Senin, 10 Sept 2018</span>
+      </div>
+    </ons-list-item>
+    <ons-list-item tappable modifier="chevron">
+      <div class="left">
+        <ons-icon icon="md-pin" class="list-item__icon"></ons-icon>
+      </div>
+      <div class="center">
+        <span class="list-item__title" style="font-size: 14px;">Jl Ahmad Yani gg 14a no.1 Pekalongan</span>
+        <span class="list-item__subtitle">Cat Pagar Putih</span>
+      </div>
+    </ons-list-item>
+
+    <div style="border-top: solid #eee"></div>
+	<ons-list-header>Metode Pembayaran</ons-list-header>
+	<ons-list-item tappable modifier="chevron">
+      <div class="center">
+        <span>Tunai</span>
+      </div>
+      <div class="right">
+        <ons-icon icon="md-balance-wallet" class="list-item__icon"></ons-icon>
+      </div>
+    </ons-list-item>
+    <ons-list-item>
+      <div class="center">
+        <span class="list-item__title">Cuci AC</span>
+      </div>
+      <div class="right">
+        <span class="list-item__title" style="font-weight: bold;">Rp. 50.000</span>
+      </div>
+    </ons-list-item>
+    <ons-list-item>
+    	<span class="list-item__title">Rumah</span>
+    </ons-list-item>
+    <ons-list-item>
+    	<div class="center">
+        <span class="list-item__title" style="font-weight: bold;">Total</span>
+      </div>
+      <div class="right">
+        <span class="list-item__title" style="font-weight: bold;">Rp. 50.000</span>
+      </div>
+    </ons-list-item>
+    
+    <div class="atc-fixed" style="background: white;">
+      <div style="padding: 10px">
+        <ons-button ng-click="myModal.show()" modifier="large">Pesan</ons-button>
+      </div>
+    </div>
+</ons-list>
+
+<ons-modal var="myModal" direction="up" style="padding: 20px;">
+  <div style="text-align: center; background: white;">
+    <img style="width: 100%" src="img/search.jpeg">
+    <p style="text-align: center; font-weight: bold; color: gray">
+    	Pesanan Berhasil
+    </p>
+    <p style="font-size: 12px; color: gray">
+    	Kami akan mencarikan teknisi yang tepat untuk Anda
+    </p>
+    <div style="padding: 20px">
+      <ons-button ng-click="myModal.hide()" modifier="large">OK</ons-button>
+    </div>
+  </div>
+</ons-modal>

@@ -1,0 +1,27 @@
+<ons-page class="white" ng-controller="UserController as user">
+	
+	<!-- <ons-toolbar>
+		<div class="left">
+		</div>
+		<div class="center">Log In</div>
+		<div class="right"></div>
+	</ons-toolbar> -->
+
+	<div style="margin-top: 70px; padding: 20px; text-align: center;">
+		<img src="img/logo.png" style="width: 70%">
+	</div>
+
+	<div style="margin-top: 20px;" class="login-form" style="background: white;">
+		<input type="email" modifier="underbar" class="text-input--underbar" placeholder="Masukan Email Kamu" ng-model="user.email">
+		<input type="password" modifier="underbar" class="text-input--underbar" placeholder="Masukan Password Kamu" ng-model="user.password">
+		<br/><br/>
+
+		<ons-button modifier="large" class="login-button" ng-click="login(user)">LOGIN</ons-button>
+
+		<br/><br/>
+		<ons-button modifier="quiet" class="sign-up" ng-click="app.user.pushPage('signup.html', {animation:'slide'});">Sign Up / Register!</ons-button>
+
+		<ons-button modifier="quiet" class="forgot-password" ng-click="">Lupa Password?</ons-button>
+	</div>
+
+</ons-page>

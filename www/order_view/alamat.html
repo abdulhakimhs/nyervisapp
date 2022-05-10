@@ -1,0 +1,46 @@
+<ons-page ng-controller="CrudController">
+	<ons-toolbar>
+		<div class="left">
+			<ons-toolbar-button ng-click="app.tabbar.setTabbarVisibility(false); app.tambah.popPage()">
+		        <ons-icon icon="md-arrow-left"></ons-icon>
+		    </ons-toolbar-button>
+		</div>
+		<div class="center">
+			Alamat
+		</div>
+	</ons-toolbar>
+
+	<ons-list>
+		<ons-list-header>
+			<p style="margin-top:10px; line-height:18px; border-bottom: 1px solid #eee;">Silahkan masukkan alamat lengkap dimana teknisi kami akan melakukan perbaikan </p>
+
+		</ons-list-header>
+
+		<ons-list-item>
+			<textarea class="textarea textarea--transparent" placeholder="Isikan alamatnya disini" ng-model="alamat" style="width:100%; height: 100px;"></textarea>
+		</ons-list-item>
+
+		<ons-list-item>
+			<ons-button ng-click="app.tabbar.setTabbarVisibility(false);app.tambah.pushPage('order_view/maps.html',{animation:'slide'})">Buka Maps</ons-button>
+		</ons-list-item>
+
+		<ons-list-header>
+			<p style="margin-top:10px; line-height:18px; border-bottom: 1px solid #eee;">Tambahkankan juga keterangan alamat </p>
+		</ons-list-header>
+
+		<ons-list-item>
+			<textarea class="textarea textarea--transparent" placeholder="Misal: Rumah pagar putih" ng-model="keterangan" style="width:100%; height: 100px;"></textarea>
+		</ons-list-item>
+
+	</ons-list>
+
+	<div class="atc-fixed" style="border-top: 1px solid #eee;">
+		<ons-list>
+			<ons-list-item>
+				<ons-col>
+					<ons-button ng-click="isiSelanjutnya('alamat', alamat, keterangan, 'create')" modifier="large">Lanjut</ons-button>
+				</ons-col>
+			</ons-list-item>
+		</ons-list>
+	</div>
+</ons-page>

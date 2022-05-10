@@ -1,0 +1,68 @@
+<ons-navigator var="app.pesanan">
+	
+	<ons-page ons-init="pesananInit()">
+		<ons-toolbar>
+			<div class="left"></div>
+			<div class="center">Pesanan</div>
+			<div class="right"></div>
+		</ons-toolbar>
+
+		<ons-pull-hook ng-action="pullNewPesanan($Selesai Dikerjakan)" var="loaderHome">
+			<span ng-switch="loaderPesanan.state">
+				<span ng-switch-when="initial">
+					<ons-icon size="35px" icon="ion-arrow-down-a"></ons-icon> Pull Down To Refresh
+				</span>
+
+				<span ng-switch-when="preaction">
+					<ons-icon size="35px" icon="ion-arrow-up-a"></ons-icon> Release To Refresh
+				</span>
+
+				<span ng-switch-when="action">
+					<ons-icon size="35px" icon="ion-load-d" spin="true"></ons-icon> Loading Data...
+				</span>
+			</span>
+		</ons-pull-hook>
+
+		<div>
+			<ons-list id="pesanan-list" style="background: white;">
+				<ons-list-header>Riwayat Pemesanan</ons-list-header>
+				<ons-list-item ons-lazy-repeat="pesananDelegate" modifier="tappable chevron" class="list-item-container" ng-click="app.tabbar.setTabbarVisibility(true);app.pesanan.pushPage('detail_pesanan_pending.html',{animation:'slide'})">
+					<div class="left">
+			        	<img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+			      	</div>
+				    <div class="center">
+				        <span class="list-item__title">{{ product }}</span>
+				        <span class="list-item__subtitle" ng-style="{'color': status_pesanan == 'Selesai Dikerjakan' ? 'green' : 'orange'}">{{ status_pesanan }}</span>
+				        <span class="list-item__subtitle">{{ waktu_pesanan }}</span>
+				    </div>
+			    	<div class="right">
+				    	<span class="list-item__icon" ng-if="status_pesanan == 'Selesai Dikerjakan'" ng-style="{'color': status_pesanan == 'Selesai Dikerjakan' ? 'green' : 'orange'}">
+				    		<ons-icon icon="md-check"></ons-icon>
+				    	</span>
+				    	<span class="list-item__icon" ng-if="status_pesanan == 'waiting'" ng-style="{'color': status_pesanan == 'Selesai Dikerjakan' ? 'green' : 'orange'}">
+				    		<ons-icon icon="md-time"></ons-icon>
+				    	</span>
+				    </div>
+				    <!-- <div class="right" ng-if="status_pesanan == Waiting">
+				    	<span class="list-item__icon" style="color: orange;"><ons-icon icon="md-time"></ons-icon></span>
+				    </div> -->
+				</ons-list-item>
+				<!-- <ons-list-item modifier="tappable chevron" class="list-item-container" ng-click="app.tabbar.setTabbarVisibility(false);app.pesanan.pushPage('detail_pesanan_pending.html',{animation:'slide'})">
+					<div class="left">
+			        	<img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+			      	</div>
+				    <div class="center">
+				        <span class="list-item__title">Perbaikan TV</span>
+				        <span class="list-item__subtitle" style="color: orange;">Menunggu Teknisi</span>
+				        <span class="list-item__subtitle">26 Des 2018 | 15.30</span>
+				    </div>
+				    <div class="right">
+				    	<span class="list-item__icon" style="color: orange;"><ons-icon icon="md-time"></ons-icon></span>
+				    </div> -->
+				</ons-list-item>
+			</ons-list>
+		</div>
+		
+	</ons-page>
+
+</ons-navigator>

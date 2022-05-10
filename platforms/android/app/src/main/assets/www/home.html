@@ -1,0 +1,66 @@
+<ons-navigator var="app.home">
+	
+	<ons-page ons-init="kategoriInit()">
+		<ons-toolbar>
+			<div class="left"></div>
+			<div class="center">Beranda</div>
+			<div class="right"></div>
+		</ons-toolbar>
+
+		<ons-pull-hook ng-action="pullNewHome($done)" var="loaderHome">
+			<span ng-switch="loaderHome.state">
+				<span ng-switch-when="initial">
+					<ons-icon size="35px" icon="ion-arrow-down-a"></ons-icon> Pull Down To Refresh
+				</span>
+
+				<span ng-switch-when="preaction">
+					<ons-icon size="35px" icon="ion-arrow-up-a"></ons-icon> Release To Refresh
+				</span>
+
+				<span ng-switch-when="action">
+					<ons-icon size="35px" icon="ion-load-d" spin="true"></ons-icon> Loading Data...
+				</span>
+			</span>
+		</ons-pull-hook>
+
+
+		<div class="toolbar" style="background-color: #33ab9f">
+			<div class="toolbar-inner" style="margin-left: 10px;">
+				<div class="left" style="color: white">
+					<ons-icon icon="md-balance-wallet"></ons-icon> <b>Saldo</b>
+				</div>
+				<div class="right" style="margin-right: 20px; color: white">
+					<b>Rp 0</b>
+				</div>
+			</div>
+		</div>
+
+		<div id="slider">
+			<figure>
+				<img src="img/slider2.jpg">
+				<img src="img/slider3.jpg">
+				<img src="img/slider2.jpg">
+				<img src="img/slider3.jpg">
+				<img src="img/slider2.jpg">
+			</figure>
+		</div>
+		<div>
+			<ons-list id="service-list" style="background: white;">
+				<ons-list-header>Mau Servis Apa?</ons-list-header>
+				<ons-list-item ons-lazy-repeat="kategoriDelegate" modifier="tappable chevron" class="list-item-container" ng-click="productService(category_id)">
+					<ons-row>
+						<ons-col>
+							<div class="name">{{ category_name }}</div>
+							<div class="desc">{{ category_desc }}</div>
+						</ons-col>
+						<ons-col width="130px">
+							<img src="http://ws.jarvisid.com/uploads/{{category_image}}" class="thumbnail">
+						</ons-col>
+					</ons-row>
+				</ons-list-item>
+			</ons-list>
+		</div>
+
+	</ons-page>
+
+</ons-navigator>

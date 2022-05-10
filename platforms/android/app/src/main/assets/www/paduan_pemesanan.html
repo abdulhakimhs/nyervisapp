@@ -1,0 +1,49 @@
+<ons-page>
+	<ons-toolbar>
+		<div class="left">
+			<ons-toolbar-button ng-click="app.tabbar.setTabbarVisibility(true); app.bantuan.popPage()">
+		        <ons-icon icon="md-arrow-left"></ons-icon>
+		    </ons-toolbar-button>
+		</div>
+		<div class="center">
+			Paduan Pemesanan
+		</div>
+	</ons-toolbar>
+	<ons-carousel var="carousel" ons-postchange="console.log('Changed to ' + $event.activeIndex)" fullscreen swipeable auto-scroll overscrollable>
+	    <ons-carousel-item style="background-color: #373B44;">
+	      <div style="text-align: center; font-size: 30px; margin-top: 50%; color: #fff;">
+	        Cara Pesan Nyervis
+	      </div>
+	    </ons-carousel-item>
+	    <ons-carousel-item style="background-color: #373B44;">
+	      <div style="text-align: center; font-size: 30px; margin-top: 50%; color: #fff;">
+	        Pilih layanan sesuai kebutuhan Anda
+	      </div>
+	    </ons-carousel-item>
+	    <ons-carousel-item style="background-color: #373B44;">
+	      <div style="text-align: center; font-size: 30px; margin-top: 50%; color: #fff;">
+	        Isi data pesanan dengan jelas
+	      </div>
+	    </ons-carousel-item>
+	    <ons-carousel-item style="background-color: #373B44;">
+	      <div style="text-align: center; font-size: 30px; margin-top: 50%; color: #fff;">
+	        Tunggu beberapa menit, Kami akan mencarikan Teknisi yang tepat untuk Anda
+	      </div>
+	    </ons-carousel-item>
+	    <ons-carousel-item style="background-color: #373B44;">
+	      <div style="text-align: center; font-size: 30px; margin-top: 50%; color: #fff;">
+	        Setelah mendapat Teknisi, maka Teknisi akan menuju ke alamat yang dipesan
+	      </div>
+	    </ons-carousel-item>
+	    <ons-carousel-item style="background-color: #373B44;">
+	      <div style="text-align: center; font-size: 30px; margin-top: 50%; color: #fff;">
+	        Bayar sesuai biaya yang telah ditentukan kepada Teknisi
+	      </div>
+	    </ons-carousel-item>
+	    <ons-carousel-item style="background-color: #373B44;">
+	      <div style="text-align: center; font-size: 30px; margin-top: 50%; color: #fff;">
+	        Pesanan Anda telah selesai dikerjakan
+	      </div>
+	    </ons-carousel-item>
+	</ons-carousel>
+</ons-page>

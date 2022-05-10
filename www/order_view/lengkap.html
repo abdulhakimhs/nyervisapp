@@ -1,0 +1,70 @@
+<ons-page ng-controller="CrudController">
+	<ons-toolbar>
+		<div class="center">Detail Order</div>
+		<div class="left">
+			<ons-toolbar-button ng-click="app.tabbar.setTabbarVisibility(false); app.tambah.popPage()">
+				<ons-icon icon="md-arrow-left"></ons-icon>
+			</ons-toolbar-button>
+		</div>
+	</ons-toolbar>
+
+	<ons-list>
+		<ons-list-header>Lokasi Dan Waktu Pesanan</ons-list-header>
+
+	    <ons-list-item modifier="tappable chevron" class="list-item" ng-click="app.tabbar.setTabbarVisibility(false);app.tambah.pushPage('order_view/alamat.html',{animation:'slide'})">
+	      <div class="left">
+	        <ons-icon icon="md-pin" class="list-item__icon"></ons-icon>
+	      </div>
+	      <div class="center">
+	       <span class="list-item__title">{{alamat}}</span><span class="list-item__subtitle">{{keterangan}}</span>
+	      </div>
+	    </ons-list-item>
+	    <ons-list-item modifier="tappable chevron" class="list-item-container" ng-click="app.tabbar.setTabbarVisibility(false);app.tambah.pushPage('order_view/waktu.html',{animation:'slide'})">
+	      <div class="left">
+	        <ons-icon icon="md-calendar-note" class="list-item__icon"></ons-icon>
+	      </div>
+	      <div class="center">
+	      	<span class="list-item__title">{{waktu}}</span>
+	        <!-- <span class="list-item__subtitle">Atur Tanggal</span> -->
+	      </div>
+	    </ons-list-item>
+
+	    <ons-list-header>Detail Pembayaran</ons-list-header>
+
+	    <ons-list-item class="list-item-container">
+	      <div class="center">
+	        <span class="list-item__title">Metode Pembayaran</span>
+	      </div>
+	      <div class="right">
+	        <span class="list-item__title">TUNAI</span>
+	      </div>
+	    </ons-list-item>
+	    <ons-list-item class="list-item-container">
+	      <div class="center">
+	        <span class="list-item__title">{{jasa}}</span>
+	      </div>
+	      <div class="right">
+	        <span class="list-item__title">Rp 70000</span>
+	      </div>
+	    </ons-list-item>
+	    <ons-list-item class="list-item-container">
+	      <div class="center">
+	        <span class="list-item__title" style="font-weight: bold;">Total</span>
+	      </div>
+	      <div class="right">
+	        <span class="list-item__title" style="font-weight: bold;">Rp 70.000</span>
+	      </div>
+	    </ons-list-item>
+
+	</ons-list>
+
+	<div class="atc-fixed" style="border-top: 1px solid #eee;">
+		<ons-list>
+			<ons-list-item>
+				<ons-col>
+					<ons-button ng-click="halInfoFinish('create')" modifier="large">Pesan</ons-button>
+				</ons-col>
+			</ons-list-item>
+		</ons-list>
+	</div>
+</ons-page>

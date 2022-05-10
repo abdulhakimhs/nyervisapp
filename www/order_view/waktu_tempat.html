@@ -1,0 +1,44 @@
+<ons-page ng-controller="CrudController">
+	<ons-toolbar>
+		<div class="center">Atur Lokasi dan Waktu</div>
+		<div class="left">
+			<ons-toolbar-button ng-click="app.tabbar.setTabbarVisibility(false); app.tambah.popPage()">
+				<ons-icon icon="md-arrow-left"></ons-icon>
+			</ons-toolbar-button>
+		</div>
+	</ons-toolbar>
+
+	<ons-list>
+		<ons-list-header>Lokasi Dan Waktu Pesanan</ons-list-header>
+
+	    <ons-list-item>
+	      <div class="left">
+	        <ons-icon icon="md-pin" class="list-item__icon"></ons-icon>
+	      </div>
+	      <div class="center">
+	       <span class="list-item__title"><ons-input modifier="underbar" placeholder="Isi Alamat" style="width:100%" ng-model="alamat"></ons-input></span><span class="list-item__subtitle"><ons-input modifier="underbar" placeholder="Isi Keterangan Alamat" style="width:100%" ng-model="keterangan"></ons-input></span>
+	      </div>
+	    </ons-list-item>
+	    <ons-list-item>
+	      <div class="left">
+	        <ons-icon icon="md-calendar-note" class="list-item__icon"></ons-icon>
+	      </div>
+	      <div class="center">
+	      	<span class="list-item__title"><ons-input modifier="underbar" placeholder="Atur jam kedatangan" style="width:100%" ng-model="jam"></ons-input></span>
+	       <span class="list-item__subtitle"><ons-input modifier="underbar" placeholder="Atur tanggal kedatangan" style="width:100%" ng-model="tanggal"></ons-input></span>
+	      </div>
+	    </ons-list-item>
+
+	</ons-list>
+
+	<div class="atc-fixed" style="border-top: 1px solid #eee;">
+		<ons-list>
+			<ons-list-item>
+				<ons-col>
+					<ons-button ng-click="isiSelanjutnya('waktu', alamat)" modifier="large">Lanjut</ons-button>
+				</ons-col>
+			</ons-list-item>
+		</ons-list>
+	</div>
+
+</ons-page>

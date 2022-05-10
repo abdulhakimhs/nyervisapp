@@ -1,0 +1,30 @@
+<ons-page ng-controller="UserController as user_reg">
+	
+	<!-- <ons-toolbar>
+		<div class="left">
+			<ons-toolbar-button ng-click="app.user.popPage()">
+		        <ons-icon icon="md-chevron-left"></ons-icon>
+		    </ons-toolbar-button>
+		</div>
+		<div class="center">Register</div>
+		<div class="right"></div>
+	</ons-toolbar> -->
+
+	<div style="margin-top: 60px; padding: 20px; text-align: center;">
+		<img src="img/logo.png" style="width: 70%">
+	</div>
+
+	<div style="margin-top: 10px;" class="login-form">
+		<input type="text" class="text-input--underbar" placeholder="Masukan Nama Kamu" ng-model="user_reg.nama">
+		<input type="text" class="text-input--underbar" placeholder="Masukan No HP Kamu" ng-model="user_reg.no_hp">
+		<input type="email" class="text-input--underbar" placeholder="Masukan Email Kamu" ng-model="user_reg.email">
+		<input type="password" class="text-input--underbar" placeholder="Masukan Password Kamu" ng-model="user_reg.password">
+		<br/><br/>
+
+		<ons-button modifier="large" class="login-button" ng-click="register(user_reg)">DAFTAR SEKARANG!</ons-button>
+
+		<br/><br/>
+		<ons-button modifier="quiet" ng-click="app.user.popPage()">Sudah Punya Akun?</ons-button>
+	</div>
+
+</ons-page>

@@ -1,0 +1,87 @@
+<ons-navigator var="app.user">
+	
+	<ons-page ng-controller="UserController">
+		<ons-toolbar>
+			<div class="left"></div>
+			<div class="center">User</div>
+			<div class="right"></div>
+		</ons-toolbar>
+
+		<ons-pull-hook ng-action="pullUser($done)" var="loaderUser">
+			<span ng-switch="loaderUser.state">
+				<span ng-switch-when="initial">
+					<ons-icon size="35px" icon="ion-arrow-down-a"></ons-icon> Pull Down To Refresh
+				</span>
+
+				<span ng-switch-when="preaction">
+					<ons-icon size="35px" icon="ion-arrow-up-a"></ons-icon> Release To Refresh
+				</span>
+
+				<span ng-switch-when="action">
+					<ons-icon size="35px" icon="ion-load-d" spin="true"></ons-icon> Loading Data...
+				</span>
+			</span>
+		</ons-pull-hook>
+
+		<div>
+			<ons-list id="profile-list" style="background: white;">
+				<ons-list-header>User Profile</ons-list-header>
+				<ons-list-item ons-lazy-repeat="userprofileDelegate" modifier="tappable chevron" class="list-item-container" ng-click="app.tabbar.setTabbarVisibility(false);app.user.pushPage('ubah_profile.html',{animation:'slide'})">
+					<div class="left">
+			        	<img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+			      	</div>
+				    <div class="center">
+				        <span class="list-item__title">{{ namanya }}</span><span class="list-item__subtitle">{{ emailnya }}</span>
+				    </div>
+				    <div class="right">
+				       <span class="notification notification--material">Ubah</span>
+				    </div>
+				</ons-list-item>
+			</ons-list><br/>
+			<ons-list id="profile-info" style="background: white;">
+				<ons-list-item modifier="tappable chevron" class="list-item-container" ng-click="app.tabbar.setTabbarVisibility(false);app.user.pushPage('ketentuan_layanan.html',{animation:'slide'})">
+					<div class="left">
+						<ons-icon icon="md-file-text" class="list-item__icon"></ons-icon>
+					</div>
+				    <div class="center">
+				        <span class="list-item__title">Ketentuan Layanan</span>
+				    </div>
+				</ons-list-item>
+				<ons-list-item modifier="tappable chevron" class="list-item-container" ng-click="app.tabbar.setTabbarVisibility(false);app.user.pushPage('kebijakan_prifasi.html',{animation:'slide'})">
+					<div class="left">
+						<ons-icon icon="md-lock-outline" class="list-item__icon"></ons-icon>
+					</div>
+				    <div class="center">
+				        <span class="list-item__title">Kebijakan Privasi</span>
+				    </div>
+				</ons-list-item>
+				<ons-list-item modifier="tappable chevron" class="list-item-container" ng-click="app.tabbar.setTabbarVisibility(false);app.user.pushPage('bari_kami_nilai.html',{animation:'slide'})">
+					<div class="left">
+						<ons-icon icon="md-star-outline" class="list-item__icon"></ons-icon>
+					</div>
+				    <div class="center">
+				        <span class="list-item__title">Beri Kami Nilai</span>
+				    </div>
+				    <div class="right">
+				    	<span class="list-item__subtitle">v1.0.0</span>
+				    </div>
+				</ons-list-item>
+			</ons-list><br/>
+			<ons-list id="profile-action">
+				<ons-list-item modifier="tappable chevron" class="list-item-container" ng-click="logout()" style="border-top: 1px solid #eee; border-bottom: 1px solid #eee;">
+				    <div class="center">
+				        <span style="color: red;" class="list-item__title">Keluar</span>
+				    </div>
+				</ons-list-item>
+				<!-- <ons-list-item modifier="tappable chevron" class="list-item-container" ng-click="app.tabbar.setTabbarVisibility(false);app.user.pushPage('login.html',{animation:'slide'})">
+				    <div class="center">
+				        <span style="color: #4CAF50;" class="list-item__title">Login</span>
+				    </div>
+				</ons-list-item> -->
+			</ons-list>
+
+		</div>
+		
+	</ons-page>
+
+</ons-navigator>

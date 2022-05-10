@@ -1,0 +1,145 @@
+<ons-page>
+	<ons-toolbar>
+		<div class="left">
+			<ons-toolbar-button ng-click="app.tabbar.setTabbarVisibility(true); app.bantuan.popPage()">
+		        <ons-icon icon="md-arrow-left"></ons-icon>
+		    </ons-toolbar-button>
+		</div>
+		<div class="center">
+			Informasi Layanan
+		</div>
+	</ons-toolbar>
+	<ons-list style="padding: 5px;" id="informasi">
+		<ons-list-header>Klik untuk melihat informasi</ons-list-header>
+	    <ons-list-item accordion>
+	    	Apa itu Nyervis
+	      	<div class="expandable-content">
+	      		Nyervis adalah aplikasi jasa on-demand perawatan dan perbaikan peralatan rumah tangga.
+	  		</div>
+	    </ons-list-item>
+		<ons-list-item style="color: green;" tappable ng-click="dialog.show()">Apa itu Nyervis</ons-list-item>
+		<ons-list-item style="color: green;" ng-click="dialog_2.show()" tappable>Layanan yang tersedia di Nyervis</ons-list-item>
+		<ons-list-item style="color: green;" ng-click="dialog_3.show()" tappable>Cara Pembayaran</ons-list-item>
+		<ons-list-item style="color: green;" ng-click="dialog_4.show()" tappable>Area Layanan</ons-list-item>
+		<ons-list-item style="color: green;" ng-click="dialog_5.show()" tappable>Apakah saya bisa mengubah pesanan?</ons-list-item>
+		<ons-list-item style="color: green;" ng-click="dialog_6.show()" tappable>Apakah ada batasan jumlah barang yang ingin saya perbaiki?</ons-list-item>
+		<ons-list-item style="color: green;" ng-click="dialog_7.show()" tappable>Berapa tarif layanan Nyervis</ons-list-item>
+		<ons-list-item style="color: green;" ng-click="dialog_8.show()" tappable>Bagaimana cara saya mengetahui status pemesanan</ons-list-item>
+		<ons-list-item style="color: green;" ng-click="dialog_9.show()" tappable>Apakah ada tambahan biaya transportasi untuk teknisi?</ons-list-item>
+		<ons-list-item style="color: green;" ng-click="dialog_10.show()" tappable>Apakah ada garansi pada layanan Nyervis</ons-list-item>
+		<ons-list-item style="color: green;" ng-click="dialog_11.show()" tappable>Waktu Operasional</ons-list-item>
+	</ons-list>
+
+	<ons-dialog var="dialog">
+	  <div style="text-align: center; padding: 10px;">
+	    <p>
+	      Nyervis adalah aplikasi jasa on-demand perawatan dan perbaikan peralatan rumah tangga.
+	    </p>
+	    <p>
+	      <ons-button ng-click="dialog.hide()">OK</ons-button>
+	    </p>
+	  </div>
+	</ons-dialog>
+	<ons-dialog var="dialog_2">
+	  <div style="text-align: center; padding: 10px;">
+	    <p>
+	      Saat ini, Nyervis menyediakan layanan perawatan dan perbaikan AC, CCTV, TV dan Instalasi Listrik.
+	    </p>
+	    <p>
+	      <ons-button ng-click="dialog_2.hide()">OK</ons-button>
+	    </p>
+	  </div>
+	</ons-dialog>
+	<ons-dialog var="dialog_3">
+	  <div style="text-align: center; padding: 10px;">
+	    <p>
+	      Kami informasikan untuk pembayaran layanan Nyervis bisa bayar tunai kepada Teknisi di tempat.
+	    </p>
+	    <p>
+	      <ons-button ng-click="dialog_3.hide()">OK</ons-button>
+	    </p>
+	  </div>
+	</ons-dialog>
+	<ons-dialog var="dialog_4">
+	  <div style="text-align: center; padding: 10px;">
+	    <p>
+	      Sementara Nyervis hanya tersedia di wilayah Kota Pekalongan.
+	    </p>
+	    <p>
+	      <ons-button ng-click="dialog_4.hide()">OK</ons-button>
+	    </p>
+	  </div>
+	</ons-dialog>
+	<ons-dialog var="dialog_5">
+	  <div style="text-align: center; padding: 10px;">
+	    <p>
+	      Anda bisa mengubah atau menambahkan layanan yang Anda inginkan pada menu Edit Pesanan.
+	    </p>
+	    <p>
+	      <ons-button ng-click="dialog_5.hide()">OK</ons-button>
+	    </p>
+	  </div>
+	</ons-dialog>
+	<ons-dialog var="dialog_6">
+	  <div style="text-align: center; padding: 10px;">
+	    <p>
+	      Batasan maksimal perbaikan adalah 10 Unit. Di atas jumlah yang telah ditentukan, Anda harus membuat pesanan baru.
+	    </p>
+	    <p>
+	      <ons-button ng-click="dialog_6.hide()">OK</ons-button>
+	    </p>
+	  </div>
+	</ons-dialog>
+	<ons-dialog var="dialog_7">
+	  <div style="text-align: center; padding: 10px;">
+	    <p>
+	      Anda dapat melihat tarif layanan yang sudah tersedia pada aplikasi Nyervis.<br><br>
+	      Jika barang Anda memerlukan penanganan khusus, harga akan disesuaikan dengan jenis kerusakan sesuai diagnosa dari Teknisi.
+	    </p>
+	    <p>
+	      <ons-button ng-click="dialog_7.hide()">OK</ons-button>
+	    </p>
+	  </div>
+	</ons-dialog>
+	<ons-dialog var="dialog_8">
+	  <div style="text-align: center; padding: 10px;">
+	    <p>
+	      Untuk melihat status pemesanan Anda dapat melihatnya di menu Pesanan.
+	    </p>
+	    <p>
+	      <ons-button ng-click="dialog_8.hide()">OK</ons-button>
+	    </p>
+	  </div>
+	</ons-dialog>
+	<ons-dialog var="dialog_9">
+	  <div style="text-align: center; padding: 10px;">
+	    <p>
+	      Harga yang tertera pada aplikasi Nyervis sudah termasuk biaya transportasi teknisi.
+	    </p>
+	    <p>
+	      <ons-button ng-click="dialog_9.hide()">OK</ons-button>
+	    </p>
+	  </div>
+	</ons-dialog>
+	<ons-dialog var="dialog_10">
+	  <div style="text-align: center; padding: 10px;">
+	    <p>
+	      Nyervis menyediakan garansi sesuai dengan layanan yang ada.
+	    </p>
+	    <p>
+	      <ons-button ng-click="dialog_10.hide()">OK</ons-button>
+	    </p>
+	  </div>
+	</ons-dialog>
+	<ons-dialog var="dialog_11">
+	  <div style="text-align: center; padding: 10px;">
+	    <p>
+	      Layanan Nyervis.com tersedia pada pukul 08.00 - 20.00.<br><br>
+	      Untuk pemesanan layanan di luar jam pelayanan, akan diproses pada keesokan harinya.
+	    </p>
+	    <p>
+	      <ons-button ng-click="dialog_11.hide()">OK</ons-button>
+	    </p>
+	  </div>
+	</ons-dialog>
+</ons-page>

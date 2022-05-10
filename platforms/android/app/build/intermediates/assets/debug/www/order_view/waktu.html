@@ -1,0 +1,56 @@
+<ons-page ng-controller="CrudController">
+	<ons-toolbar>
+		<div class="left">
+			<ons-toolbar-button ng-click="app.tabbar.setTabbarVisibility(false); app.tambah.popPage()">
+		        <ons-icon icon="md-arrow-left"></ons-icon>
+		    </ons-toolbar-button>
+		</div>
+		<div class="center">
+			Atur Waktu dan Tanggal
+		</div>
+	</ons-toolbar>
+
+	<ons-list>
+		<ons-row>
+			<ons-col>
+				<ons-list-header>
+					<p style="margin-top:10px; line-height:18px">Atur kapan teknisi kami akan melakukan pekerjaannya </p>
+				</ons-list-header>
+
+				<ons-list-item>
+					<textarea class="textarea textarea--transparent" id="tgl" placeholder="Tanggal" ng-model="waktu" style="width:100%; height: 50px;"></textarea>
+				</ons-list-item>
+
+				<ons-list-item>
+					<ons-button ng-click="aturWaktu('tanggal')">Pilih Tanggal & Waktu</ons-button>
+				</ons-list-item>
+			</ons-col>
+		</ons-row>
+		<!-- <ons-row style="padding-top: 25px;">
+			<ons-col>
+				<ons-list-header>
+					<p style="margin-top:10px; line-height:18px">Atur jam </p>
+				</ons-list-header>
+
+				<ons-list-item>
+					<textarea class="textarea textarea--transparent" id="jam" placeholder="Jam" ng-model="jam" style="width:100%; height: 50px;"></textarea>
+				</ons-list-item>
+
+				<ons-list-item>
+					<ons-button ng-click="aturWaktu('jam')">Pilih Jam</ons-button>
+				</ons-list-item>
+			</ons-col>
+		</ons-row> -->
+
+	</ons-list>
+
+	<div class="atc-fixed" style="border-top: 1px solid #eee;">
+		<ons-list>
+			<ons-list-item>
+				<ons-col>
+					<ons-button ng-click="isiSelanjutnya('waktu', waktu, 'create')" modifier="large">Lanjut</ons-button>
+				</ons-col>
+			</ons-list-item>
+		</ons-list>
+	</div>
+</ons-page>

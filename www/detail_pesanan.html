@@ -1,0 +1,103 @@
+<ons-page>
+	
+	<ons-toolbar>
+		<div class="left">
+			<ons-toolbar-button ng-click="app.tabbar.setTabbarVisibility(true); app.pesanan.popPage()">
+		        <ons-icon icon="md-arrow-left"></ons-icon>
+		    </ons-toolbar-button>
+		</div>
+		<div class="center">Detail Pesanan</div>
+		<div class="right"></div>
+	</ons-toolbar>
+
+	<ons-pull-hook ng-action="pullNewDetail($done)" var="loaderDetailPesanan">
+		<span ng-switch="loaderPesanan.state">
+			<span ng-switch-when="initial">
+				<ons-icon size="35px" icon="ion-arrow-down-a"></ons-icon> Pull Down To Refresh
+			</span>
+
+			<span ng-switch-when="preaction">
+				<ons-icon size="35px" icon="ion-arrow-up-a"></ons-icon> Release To Refresh
+			</span>
+
+			<span ng-switch-when="action">
+				<ons-icon size="35px" icon="ion-load-d" spin="true"></ons-icon> Loading Data...
+			</span>
+		</span>
+	</ons-pull-hook>
+
+	<ons-list id="detail-pesanan-list">
+		
+		<ons-list-header>Status Pesanan</ons-list-header>
+	    
+	    <ons-list-item ons-lazy-repeat="detailDelegate">
+	      <div class="center">
+	        <span class="list-item__title"><strong>CUCI AC</strong></span><br>
+	        <span class="list-item__subtitle">ID 1</span>
+	      </div>
+	    </ons-list-item>
+
+	    <div style="border-top: solid #eee"></div>
+	    <ons-list-header>Menunggu Teknisi</ons-list-header>
+	    <ons-list-item>
+	      <div class="left">
+	        <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+	      </div>
+	      <div class="center">
+	        <span class="list-item__title">-</span><span class="list-item__subtitle">Teknisi</span>
+	      </div>
+	    </ons-list-item>
+
+	    <div style="border-top: solid #eee"></div>
+	    <ons-list-header>Waktu dan Lokasi Pesanan</ons-list-header>
+	    <ons-list-item>
+	      <div class="left">
+	        <ons-icon icon="md-calendar-note" class="list-item__icon"></ons-icon>
+	      </div>
+	      <div class="center">
+	      	<span class="list-item__title">Sun, 11 Jan 2019 10:00 (Waktu Indonesia Barat)</span>
+	      </div>
+	    </ons-list-item>
+	    <ons-list-item>
+	      <div class="left">
+	        <ons-icon icon="md-pin" class="list-item__icon"></ons-icon>
+	      </div>
+	      <div class="center">
+	       <span class="list-item__title">Jl Ahmad Yani gg 14a no.1 Pekalongan Timur Pekalongan</span><span class="list-item__subtitle">Rumah pagar putih</span>
+	      </div>
+	    </ons-list-item>
+
+	    <div style="border-top: solid #eee"></div>
+	    <ons-list-header>Detail Pembayaran</ons-list-header>
+	    <ons-list-item>
+	      <div class="center">
+	        <span class="list-item__title">Metode Pembayaran</span>
+	      </div>
+	      <div class="right">
+	        <span class="list-item__title" style="color: #4CAF50;">TUNAI</span>
+	      </div>
+	    </ons-list-item>
+	    <ons-list-item>
+	      <div class="center">
+	        <span class="list-item__title">Biaya Jasa</span>
+	      </div>
+	      <div class="right">
+	        <span class="list-item__title" style="font-weight: bold;">Rp 70000</span>
+	      </div>
+	    </ons-list-item>
+	    <ons-list-item>
+	      <div class="center">
+	        <span class="list-item__title">Total</span>
+	      </div>
+	      <div class="right">
+	        <span class="list-item__title" style="font-weight: bold;">Rp 70000</span>
+	      </div>
+	    </ons-list-item>
+	    <div style="padding: 20px;">
+		    <ons-button modifier="large" ng-click="">Selesai</ons-button><br/><br/>
+		    <ons-button modifier="large" ng-click="">Bantuan</ons-button>
+	    </div>
+
+	</ons-list>
+
+</ons-page>

@@ -1,0 +1,65 @@
+<ons-navigator>
+	<ons-page>
+		
+		<ons-toolbar>
+			<div class="left">
+				<ons-back-button ng-click="app.tabbar.setTabbarVisibility(true); app.service.popPage()"></ons-back-button>
+			</div>
+			<div class="center">Konfirmasi Pesanan</div>
+			<div class="right"></div>
+		</ons-toolbar>
+
+		<ons-list id="konfrimasi-pesanan-list" style="background: white;">
+			<br/>
+		    <ons-list-header>Waktu dan Lokasi Pesanan</ons-list-header>
+		    <ons-list-item modifier="tappable chevron" class="list-item-container" ng-click="app.tabbar.setTabbarVisibility(false);app.service.pushPage('input_waktu.html',{animation:'slide'})">
+		      <div class="left">
+		        <ons-icon icon="md-calendar-note" class="list-item__icon"></ons-icon>
+		      </div>
+		      <div class="center">
+		      	<span class="list-item__title">10:15</span>
+		       <span class="list-item__subtitle">Senin, 10 Sept 2018</span>
+		      </div>
+		    </ons-list-item>
+		    <ons-list-item>
+		      <div class="left">
+		        <ons-icon icon="md-pin" class="list-item__icon"></ons-icon>
+		      </div>
+		      <div class="center">
+		       <span class="list-item__title">Jl Ahmad Yani gg 14a no.1 Pekalongan</span><span class="list-item__subtitle">Cat Pagar Putih</span>
+		      </div>
+		    </ons-list-item>
+
+		    <div style="border-top: solid #eee"></div>
+		    <ons-list-header>Detail Pembayaran</ons-list-header>
+		    <ons-list-item>
+		      <div class="center">
+		        <span class="list-item__title">Metode Pembayaran</span>
+		      </div>
+		      <div class="right">
+		        <span class="list-item__title" style="color: #4CAF50;">TUNAI</span>
+		      </div>
+		    </ons-list-item>
+		    <ons-list-item>
+		      <div class="center">
+		        <span class="list-item__title">Biaya Jasa</span>
+		      </div>
+		      <div class="right">
+		        <span class="list-item__title" style="font-weight: bold;">Rp 50.000</span>
+		      </div>
+		    </ons-list-item>
+		    <ons-list-item>
+		      <div class="center">
+		        <span class="list-item__title">Total</span>
+		      </div>
+		      <div class="right">
+		        <span class="list-item__title" style="font-weight: bold;">Rp 50.000</span>
+		      </div>
+		    </ons-list-item>
+		    <ons-button modifier="large" ng-click="">Selesai</ons-button><br/><br/>
+		    <ons-button modifier="large" ng-click="">Bantuan</ons-button>
+
+		</ons-list>
+
+	</ons-page>
+</ons-navigator>

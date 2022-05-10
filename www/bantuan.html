@@ -1,0 +1,23 @@
+<ons-navigator var="app.bantuan">
+	
+	<ons-page>
+		<ons-toolbar>
+			<div class="left"></div>
+			<div class="center">Bantuan</div>
+			<div class="right"></div>
+		</ons-toolbar>
+		
+		<div style="padding: 20px; background: white">
+			<h4>Halo Users</h4>
+			<p>Ada yang bisa kami bantu ?</p>
+		</div>
+		<ons-list style="background: white">
+			<ons-list-header>Informasi</ons-list-header>
+			<ons-list-item ng-click="app.bantuan.pushPage('paduan_pemesanan.html')" tappable modifier="chevron">Paduan Pemesanan</ons-list-item>
+			<ons-list-item ng-click="app.bantuan.pushPage('informasi_layanan.html')" tappable modifier="chevron">Informasi Layanan</ons-list-item>
+			<ons-list-item ng-click="app.bantuan.pushPage('hubungi_kami.html')" tappable modifier="chevron">Hubungi Kami</ons-list-item>
+			<ons-list-item ng-click="app.bantuan.pushPage('saran_masukan.html')" tappable modifier="chevron">Saran dan Masukan</ons-list-item>
+		</ons-list>
+	</ons-page>
+
+</ons-navigator>

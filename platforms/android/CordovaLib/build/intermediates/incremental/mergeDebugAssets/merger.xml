@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/media/abdulhakim/DATA1/HNG/DVD Mobile Hybrid/nyervisapp_v1.2.2/platforms/android/CordovaLib/assets"/><source path="/media/abdulhakim/DATA1/HNG/DVD Mobile Hybrid/nyervisapp_v1.2.2/platforms/android/CordovaLib/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/media/abdulhakim/DATA1/HNG/DVD Mobile Hybrid/nyervisapp_v1.2.2/platforms/android/CordovaLib/src/debug/assets"/></dataSet></merger>
